@@ -1,35 +1,95 @@
-# Luna Books Web
+# 🌙 Luna Books Web
 
-A responsive bookstore website for the Repositories and Branches with Git and GitHub laboratory.
+> A responsive bookstore website built for the **Repositories and Branches with Git and GitHub** laboratory.
 
-## Team
-- Raymundo Herrera
-- Omar Rodríguez
+## 👥 Team
+| Member | Role |
+|--------|------|
+| Raymundo Herrera | Catalog & Contact pages |
+| Omar Rodríguez | Login page |
 
-## Run locally
-Use any static web server. With Python 3:
+> **Note:** These assignments do not claim independent authorship or completed peer review. Each teammate must perform and document their own review from their own GitHub account.
 
+## 🛠️ Technologies
+
+- **HTML5** — Semantic markup with accessibility features (`aria-label`, `aria-current`, skip links)
+- **CSS3** — Custom properties, flexbox layout, responsive design
+- **JavaScript (ES6)** — Client-side form validation, DOM manipulation
+- No frameworks or external dependencies required.
+
+## 📁 Project Structure
+
+```
+luna-books-web/
+├── index.html              # Home page
+├── pages/
+│   ├── catalog.html        # Book catalog with genre filters
+│   ├── contact.html        # Contact form with validation
+│   └── login.html          # Login form with client-side validation
+├── css/
+│   ├── styles.css          # Main stylesheet and design system
+│   ├── contact.css         # Contact page specific styles
+│   └── login.css           # Login page specific styles
+├── js/
+│   ├── main.js             # Shared scripts
+│   ├── contact.js          # Contact form validation
+│   └── login.js            # Login form validation
+├── assets/                 # Images and static assets
+├── CONTRIBUTING.md         # Team workflow and PR guidelines
+└── README.md               # This file
+```
+
+## 🚀 Run Locally
+
+Use any static web server. No npm installation or API key is required.
+
+**With Python 3:**
 ```sh
 python3 -m http.server 8080
 ```
 
-Open http://localhost:8080. No npm installation or API key is required.
+**With VS Code Live Server:**
+Right-click `index.html` → *Open with Live Server*
 
-## Pages
-- Home: `index.html`
-- Catalog: `pages/catalog.html`, with book genre filters
-- Login: `pages/login.html`, with client-side validation
-- Contact: `pages/contact.html`, with form validation
+Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
-The login and contact forms are classroom demonstrations. They do not authenticate users, store passwords, or send messages. The address, prices, opening hours and phone are fictional sample content from the classroom scenario.
+## 📄 Pages
 
-## Branching workflow
-`main` contains the stable release. `develop` integrates features through pull requests. `feature/catalog-page`, `feature/login-form`, and `feature/contact-page` start from develop. `hotfix/footer-phone` starts from main and must be integrated into both main and develop. Release: develop → main, then tag v1.0.0.
+| Page | File | Features |
+|------|------|----------|
+| Home | `index.html` | Hero section, navigation, footer |
+| Catalog | `pages/catalog.html` | Book listing with genre filters |
+| Login | `pages/login.html` | Client-side form validation |
+| Contact | `pages/contact.html` | Contact form with validation |
 
-Keep all feature and hotfix branches on GitHub until the teacher checks the evidence. This delivery rule supersedes the lab's instruction to delete merged branches.
+> ⚠️ The login and contact forms are classroom demonstrations. They do not authenticate users, store passwords, or send messages. The address, prices, opening hours, and phone number are fictional sample content.
 
-## Team participation
-Suggested task distribution: Raymundo handles catalog and contact; Omar handles login. These assignments do not claim independent authorship or completed peer review. Each teammate must perform and document their own review from their own GitHub account.
+## 🌿 Branching Workflow
 
-## Verification
-Check all page links, menu filters, invalid and valid form inputs, keyboard navigation, mobile layout, and the corrected footer phone `(614) 555-0199` on main and develop.
+```
+main ─────────────────────────────────── stable release
+ │                                        ↑
+ ├── hotfix/footer-phone ────────────────┘ (also merged into develop)
+ │
+ └── develop ────────────────────────────── integration branch
+      ├── feature/catalog-page              ↑
+      ├── feature/login-form ──────────────┘
+      └── feature/contact-page
+```
+
+- **`main`** — Contains the stable release
+- **`develop`** — Integrates features through pull requests
+- **`feature/*`** — Feature branches created from `develop`
+- **`hotfix/*`** — Urgent fixes created from `main`, merged into both `main` and `develop`
+- **Release** — `develop` → `main`, then tag `v1.0.0`
+
+> All feature and hotfix branches are preserved on GitHub for grading purposes.
+
+## ✅ Verification Checklist
+
+- [ ] All page links work correctly
+- [ ] Menu filters function on the catalog page
+- [ ] Forms validate invalid and valid inputs
+- [ ] Keyboard navigation is accessible
+- [ ] Mobile/responsive layout renders properly
+- [ ] Footer phone displays `(614) 555-0199` on both `main` and `develop`
