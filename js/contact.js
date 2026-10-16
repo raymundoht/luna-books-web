@@ -1,0 +1,1 @@
+document.querySelector('#contact-form').addEventListener('submit', event => { event.preventDefault(); document.querySelector('#contact-status').textContent = 'Your message has a valid format. This demo does not send or store it.'; event.currentTarget.reset(); });

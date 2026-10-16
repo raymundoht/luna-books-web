@@ -1,0 +1,1 @@
+document.querySelector('#login-form').addEventListener('submit', event => { event.preventDefault(); document.querySelector('#login-status').textContent = 'Valid format. This demo does not sign you in or save your data.'; event.currentTarget.reset(); });
